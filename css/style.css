@@ -1,9 +1,12 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
   /*border: 2px red solid;*/
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 
@@ -328,7 +331,7 @@ a:focus {
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-  color: blue;
+  color: rgb(50, 167, 34);
   background-color: transparent;
 }
 
@@ -346,7 +349,50 @@ a:focus {
   background-color: transparent;
 }
 
+.search {
+  padding-top: 0.40cm;
+  left: 8.7in;
+  position: relative;
+  height: 50px;
+}
 
+.search .input {
+  padding-top: 0.75cm;
+  background-color: #fff;
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+#button {
+  padding-top: 0.75cm;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translateX(198px);
+}
 
 /* Feature section */
 #feature .feature-thumb {
@@ -639,6 +685,7 @@ footer strong {
 #footer a:hover {
   color: #eee;
 }
+
 /*Product Section*/
 
 .product-card {
@@ -756,6 +803,7 @@ footer strong {
   #home {
     height: 65vh;
   }
+
   .inner-header {
     height: 190vw;
   }
@@ -773,10 +821,11 @@ footer strong {
   h1 {
     font-size: 70px;
   }
+
   .product-card {
     width: 90vw;
   }
-  
+
 }
 
 
